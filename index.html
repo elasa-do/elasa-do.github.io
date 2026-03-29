@@ -1,80 +1,603 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asados con Amigos</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El Asado de Chiche — La reunión secreta de la comunidad infosec latinoamericana. Fuego, carne y hermandad.">
+  <title>El Asado de Chiche</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="repeating-guard"></div>
-  <header>
-    <div class="hero">
-      <!-- Video de fondo -->
-      <video autoplay muted loop class="video-background">
-          <source src="img/asado.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de video.
-      </video>
 
+  <!-- ═══════════════════════════════ NAVIGATION ═══════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand">
+        <img src="img/logo_chiche_blanco.png" alt="El Asado de Chiche" class="nav__logo">
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#asado" class="nav__link">Asado</a></li>
+        <li><a href="#historia" class="nav__link">Historia</a></li>
+        <li><a href="#latinoamerica" class="nav__link">Latinoamérica</a></li>
+        <li><a href="#galeria" class="nav__link">Asados</a></li>
+        <li><a href="#acerca" class="nav__link">Acerca de</a></li>
+      </ul>
     </div>
-    <img src="img/Asset 6assetes.png" class="logo">
-  </header>
+  </nav>
 
-    <img src="img/Asset 6assetes.png" class="logo2">
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero" id="hero">
+    <video autoplay muted loop playsinline class="hero__video">
+      <source src="img/asado.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <img src="img/logo_completo.png" alt="JOIN THE ELASA.DO!" class="hero__logo" loading="eager">
+      <p class="hero__tagline">La reunión que no se anuncia.<br>Te enterás o no te enterás.</p>
+      <a href="#historia" class="hero__cta">Conocé la historia</a>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>↓</span>
+    </div>
+  </section>
 
-    <section class="posts-section">
-        <div class="posts-grid">
-            <article class="post" style="background: #111;">
-              <h3><a href="https://www.youtube.com/watch?v=29NM6ySmwfQ" style="color: #C29166;">HERMANDAD</a></h3>
-            </article>
-            <article class="post" style="background: #111;">
-              <h3><a href="https://es.wikipedia.org/wiki/Am%C3%A9rica_Latina" style="color: #C29166;">LATINOAMERICA</a></h3>
-            </article>
-            <article class="post" style="background: #111;">
-                <h3><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color: #C29166;">ASADO</a></h3>
-            </article>
+  <!-- ═══════════════════════════════ ASADO SECTION ═══════════════════════════════ -->
+  <section class="section asado-section" id="asado">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">// el ritual</span>
+        <h2 class="section__title">El Asado</h2>
+        <div class="section__divider"></div>
+      </div>
+
+      <div class="asado-content">
+        <div class="asado-text">
+          <p class="asado-intro">
+            El asado no es una técnica. Es una filosofía.
+          </p>
+          <p>
+            En la tradición rioplatense, el asado es mucho más que cocinar carne: es un ritual social que puede durar todo el día. El fuego se enciende temprano, la brasa se prepara con paciencia, y mientras la carne descansa sobre la parrilla, el tiempo se detiene.
+          </p>
+          <p>
+            Nada de gas. Jamás gas. El fuego viene de la madera — a veces carbón pero a Chiche no le gusta — y de las brasas que ese fuego produce. El asador controla el calor acercando o alejando la parrilla, nunca apurado, nunca nervioso. Dos, tres, cuatro horas. El que está apurado que vaya al parripollo
+          </p>
+
+          <div class="asado-cuts">
+            <div class="cuts-group">
+              <h3 class="cuts-title">
+                <span class="cuts-icon">🥩</span> Los Cortes
+              </h3>
+              <ul class="cuts-list">
+                <li><strong>Vacío</strong> — la falda, jugosa y sin vergüenza</li>
+                <li><strong>Asado de tira</strong> — costillas cortas, cortadas finitas</li>
+                <li><strong>Entraña</strong> — skirt steak, el favorito de los que saben</li>
+                <li><strong>Chorizo</strong> — al principio, para no morir de hambre esperando</li>
+                <li><strong>Morcilla</strong> — dulce o picante, no se discute</li>
+              </ul>
+            </div>
+            <div class="cuts-group">
+              <h3 class="cuts-title">
+                <span class="cuts-icon">🔥</span> Las Achuras
+              </h3>
+              <ul class="cuts-list">
+                <li><strong>Mollejas</strong> — glándulas de ternera, crujientes por fuera</li>
+                <li><strong>Riñones</strong> — para los valientes y los entendidos</li>
+                <li><strong>Chinchulines</strong> — intestinos retorcidos, trenzados a mano</li>
+              </ul>
+              <p class="cuts-note">Las achuras van primero. Las achuras no esperan.</p>
+            </div>
+          </div>
+
+          <blockquote class="asado-quote">
+            "El asador no corre. El asador espera. Y en esa espera está todo el secreto."
+          </blockquote>
         </div>
-    </section>
 
-    <footer>
-        <!-- <p>Conéctate con nosotros en redes sociales</p> -->
-        <!-- <ul class="social-media"> -->
-        <!--     <li><a href="#">Facebook</a></li> -->
-        <!--     <li><a href="#">Instagram</a></li> -->
-        <!--     <li><a href="#">Twitter</a></li> -->
-        <!-- </ul> -->
-        <p>Contacto: info@elasa.do</p>
-        <div class="repeating-guard-footer">
-          <div class="flags">
-            <img src="https://hatscripts.github.io/circle-flags/flags/ag.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/ar.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/bb.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/bo.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/br.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/bs.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/bz.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/cl.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/co.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/cr.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/cu.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/do.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/ec.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/gd.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/gt.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/gy.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/hn.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/ht.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/jm.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/mx.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/ni.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/pa.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/pe.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/py.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/sv.svg">
-            <img src="https://hatscripts.github.io/circle-flags/flags/uy.svg">
+        <div class="asado-visual">
+          <div class="fire-container">
+            <img src="img/logo_asado.jpeg" alt="El Asado" class="asado-img" loading="lazy">
+            <div class="fire-overlay"></div>
+          </div>
+          <div class="asado-stats">
+            <div class="stat">
+              <span class="stat__num">2–4h</span>
+              <span class="stat__label">de cocción lenta</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">0</span>
+              <span class="stat__label">veces con gas</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">∞</span>
+              <span class="stat__label">vasos de alcohol</span>
+            </div>
           </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ HISTORIA SECTION ═══════════════════════════════ -->
+  <section class="section historia-section" id="historia">
+    <div class="historia-bg"></div>
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">// desde 2014</span>
+        <h2 class="section__title">Historia</h2>
+        <div class="section__divider"></div>
+      </div>
+
+      <div class="historia-content">
+        <div class="historia-narrative">
+
+          <div class="historia-chapter">
+            <span class="chapter-year">2014</span>
+            <p>
+              Todo empezó con un encuentro. En una conferencia de seguridad, Chiche — ese uruguayo que aparece en cada evento infosec de la región como si hubiera sido convocado por el universo mismo — conoció a Carlitos Loyo, un venezolano asentado en Buenos Aires con la misma chispa, la misma hambre de comunidad.
+            </p>
+            <p>
+              La química fue inmediata. Y al año siguiente, casi sin pensarlo demasiado, organizaron el primer asado: <strong>treinta personas</strong>. Varios venezolanos que Carlitos trajo de su mundo porteño. Varios uruguayos (o todos porque no son muchos) que cruzaron el río con la misma fe ciega con la que se cruza todo gran río: sin saber muy bien qué les esperaba del otro lado, pero seguros de que iba a valer la pena, y el resto, argentinos y porteños (otra raza).
+            </p>
+            <p>
+              Fue una noche salvaje. Fue una noche perfecta.
+            </p>
+          </div>
+
+          <div class="historia-chapter">
+            <span class="chapter-year">2015–2019</span>
+            <p>
+              Cada año, el asado creció. Llegaron los peruanos con su pisco. Los chilenos con sus... pisco. Los mexicanos con tequila y algo de picante que nadie pidió pero todos agradecieron, y los guatemaltecos con su Zacapa. Cada nacionalidad aportó su dosis de caos y alegría al fuego común.
+            </p>
+            <p>
+              No había publicidad. No había formulario de inscripción. El método era el de siempre: <em>te enterás o no te enterás</em>. Un chiste entre hackers que terminó siendo la regla de oro de este evento: la información más valiosa siempre llega por los canales informales y atenta contra las formalidades de otros eventos.
+            </p>
+          </div>
+
+          <div class="historia-chapter">
+            <span class="chapter-year">2020–2021</span>
+            <p>
+              Llegó la pandemia. Llegó el silencio. Los eventos se clausuraron, las conferencias migraron a pantallas, y el fuego — ese fuego que solo existe cuando hay comunidad — tuvo que esperar. Pero el sentimiento quedó. Las ganas quedaron. El hambre quedó.
+            </p>
+          </div>
+
+          <div class="historia-chapter">
+            <span class="chapter-year">2022</span>
+            <p>
+              El regreso. Carlitos se había mudado, así que se exploraron nuevos territorios: una <strong>terraza a cincuenta metros del Obelisco</strong>, en el centro mismo de Buenos Aires. Setenta y cinco personas intentando entrar por un solo ascensor. Algunos uruguayos y peruanos quedaron atrapados veinte minutos en ese ascensor, solo ellos saben que sucedió, pero sabemos que hubo mucho cariño.
+            </p>
+          </div>
+
+          <div class="historia-chapter">
+            <span class="chapter-year">2023</span>
+            <p>
+              Carlitos emigró a España. El asado no se detiene por eso. Se encontró una <strong>cervecería</strong>. El lugar tenía su propio carácter, su propio olor a madera y fermentación. La carne convivió con el alcohol, las historias y la comunidad. Nadie se quejó.
+            </p>
+          </div>
+
+          <div class="historia-chapter historia-chapter--climax">
+            <span class="chapter-year">2024</span>
+            <div class="chapter-highlight">
+              <div class="highlight-numbers">
+                <div class="highlight-stat">
+                  <span class="highlight-num">250</span>
+                  <span class="highlight-label">personas</span>
+                </div>
+                <div class="highlight-stat">
+                  <span class="highlight-num">85kg+</span>
+                  <span class="highlight-label">de carne</span>
+                </div>
+                <div class="highlight-stat">
+                  <span class="highlight-num">∞</span>
+                  <span class="highlight-label">open bar</span>
+                </div>
+              </div>
+              <p>
+                Cerraron el lugar exclusivamente para el evento. Doscientas cincuenta personas. Ochenta y cinco kilos de carne a la parrilla. Los que estaban a cargo de la bebida tuvieron que ir a un ArgenChino a reponer en el medio de la noche porque nadie esperaba que esto llegara a tanto.
+              </p>
+              <p>
+                Se quedaron sin bebidas. Literalmente sin bebidas. Si eso no es una medalla de honor, no sabemos qué es.
+              </p>
+            </div>
+          </div>
+
+          <div class="historia-coda">
+            <p>
+              Todo por el boca a boca. Todo por ese susurro que corre entre la comunidad infosec latinoamericana: <em>"¿escuchaste donde es el asado de Chiche este año?"</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="historia-video">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/ljPZ7VlnDQc"
+              title="El Asado de Chiche"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="video-caption">El asado en acción.</p>
+
+          <figure style="margin:1.5rem 0 0;">
+            <img src="img/guatemala/guate_11.jpeg" alt="La esencia del asado — Chiche en la parrilla" loading="lazy" style="width:100%;height:auto;display:block;border-radius:4px;">
+          </figure>
+          <p class="video-caption">La esencia del asado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ LATINOAMÉRICA SECTION ═══════════════════════════════ -->
+  <section class="section latam-section" id="latinoamerica">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">// nuestra gente</span>
+        <h2 class="section__title">Latinoamérica</h2>
+        <div class="section__divider"></div>
+      </div>
+
+      <div class="latam-content">
+        <p class="latam-text">
+          El asado no tiene fronteras. Chiche, uruguayos, mexicanos, venezolanos, peruanos, guatemaltecos, argentinos, porteños, chilenos, colombianos — todos juntos alrededor del mismo fuego, en comunidad.
+          <a href="https://es.wikipedia.org/wiki/Am%C3%A9rica_Latina" target="_blank" rel="noopener" class="latam-link">América Latina →</a>
+        </p>
+
+        <div class="flags-grid">
+          <img src="https://hatscripts.github.io/circle-flags/flags/ag.svg" alt="Antigua y Barbuda" title="Antigua y Barbuda" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/ar.svg" alt="Argentina" title="Argentina" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/bb.svg" alt="Barbados" title="Barbados" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/bo.svg" alt="Bolivia" title="Bolivia" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/br.svg" alt="Brasil" title="Brasil" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/bs.svg" alt="Bahamas" title="Bahamas" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/bz.svg" alt="Belice" title="Belice" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/cl.svg" alt="Chile" title="Chile" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/co.svg" alt="Colombia" title="Colombia" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/cr.svg" alt="Costa Rica" title="Costa Rica" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/cu.svg" alt="Cuba" title="Cuba" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/do.svg" alt="República Dominicana" title="República Dominicana" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/ec.svg" alt="Ecuador" title="Ecuador" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/gd.svg" alt="Granada" title="Granada" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/gt.svg" alt="Guatemala" title="Guatemala" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/gy.svg" alt="Guyana" title="Guyana" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/hn.svg" alt="Honduras" title="Honduras" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/ht.svg" alt="Haití" title="Haití" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/jm.svg" alt="Jamaica" title="Jamaica" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/mx.svg" alt="México" title="México" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/ni.svg" alt="Nicaragua" title="Nicaragua" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/pa.svg" alt="Panamá" title="Panamá" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/pe.svg" alt="Perú" title="Perú" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/py.svg" alt="Paraguay" title="Paraguay" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/sv.svg" alt="El Salvador" title="El Salvador" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/uy.svg" alt="Uruguay" title="Uruguay" loading="lazy">
+          <img src="https://hatscripts.github.io/circle-flags/flags/ve.svg" alt="Venezuela" title="Venezuela" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ GALERÍA SECTION ═══════════════════════════════ -->
+  <section class="section galeria-section" id="galeria">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">// fuego y hermandad</span>
+        <h2 class="section__title">Los Asados</h2>
+        <div class="section__divider"></div>
+      </div>
+
+      <div class="galeria-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="guatemala">Guatemala</button>
+        <button class="filter-btn" data-filter="buenosaires">Buenos Aires</button>
+      </div>
+
+      <div class="galeria-grid" id="galeriaGrid">
+
+        <!-- FEATURED: guate_11 — Chiche at the grill -->
+        <div class="galeria-item galeria-item--featured galeria-item--guatemala" data-src="img/guatemala/guate_11.jpeg" data-caption="Chiche en la parrilla — el maestro en su elemento">
+          <img src="img/guatemala/guate_11.jpeg" alt="Chiche en la parrilla" loading="lazy">
+          <div class="galeria-item__overlay">
+            <span class="galeria-item__label">⭐ La Esencia</span>
+            <span class="galeria-item__icon">⊕</span>
+          </div>
+        </div>
+
+        <!-- FEATURED: guate_9 — Cave/mine dramatic photo -->
+        <div class="galeria-item galeria-item--featured galeria-item--guatemala" data-src="img/guatemala/guate_9.jpeg" data-caption="Una noche que no se olvida">
+          <img src="img/guatemala/guate_9.jpeg" alt="La cueva" loading="lazy">
+          <div class="galeria-item__overlay">
+            <span class="galeria-item__label">⭐ La Cueva</span>
+            <span class="galeria-item__icon">⊕</span>
+          </div>
+        </div>
+
+        <!-- Guatemala images -->
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_1.jpeg">
+          <img src="img/guatemala/guate_1.jpeg" alt="Guatemala 1" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_2.jpeg">
+          <img src="img/guatemala/guate_2.jpeg" alt="Guatemala 2" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_3.jpeg">
+          <img src="img/guatemala/guate_3.jpeg" alt="Guatemala 3" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_4.jpeg">
+          <img src="img/guatemala/guate_4.jpeg" alt="Guatemala 4" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_5.jpeg">
+          <img src="img/guatemala/guate_5.jpeg" alt="Guatemala 5" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_6.jpeg">
+          <img src="img/guatemala/guate_6.jpeg" alt="Guatemala 6" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_7.jpeg">
+          <img src="img/guatemala/guate_7.jpeg" alt="Guatemala 7" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_8.jpeg">
+          <img src="img/guatemala/guate_8.jpeg" alt="Guatemala 8" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_10.jpeg">
+          <img src="img/guatemala/guate_10.jpeg" alt="Guatemala 10" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_12.jpeg">
+          <img src="img/guatemala/guate_12.jpeg" alt="Guatemala 12" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_13.jpeg">
+          <img src="img/guatemala/guate_13.jpeg" alt="Guatemala 13" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_14.jpeg">
+          <img src="img/guatemala/guate_14.jpeg" alt="Guatemala 14" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_15.jpeg">
+          <img src="img/guatemala/guate_15.jpeg" alt="Guatemala 15" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_16.jpeg">
+          <img src="img/guatemala/guate_16.jpeg" alt="Guatemala 16" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_17.jpeg">
+          <img src="img/guatemala/guate_17.jpeg" alt="Guatemala 17" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_18.jpeg">
+          <img src="img/guatemala/guate_18.jpeg" alt="Guatemala 18" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_19.jpeg">
+          <img src="img/guatemala/guate_19.jpeg" alt="Guatemala 19" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_20.jpeg">
+          <img src="img/guatemala/guate_20.jpeg" alt="Guatemala 20" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_21.jpeg">
+          <img src="img/guatemala/guate_21.jpeg" alt="Guatemala 21" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_22.jpeg">
+          <img src="img/guatemala/guate_22.jpeg" alt="Guatemala 22" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_23.jpeg">
+          <img src="img/guatemala/guate_23.jpeg" alt="Guatemala 23" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_24.jpeg">
+          <img src="img/guatemala/guate_24.jpeg" alt="Guatemala 24" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_25.jpeg">
+          <img src="img/guatemala/guate_25.jpeg" alt="Guatemala 25" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_26.jpeg">
+          <img src="img/guatemala/guate_26.jpeg" alt="Guatemala 26" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_27.jpeg">
+          <img src="img/guatemala/guate_27.jpeg" alt="Guatemala 27" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_28.jpeg">
+          <img src="img/guatemala/guate_28.jpeg" alt="Guatemala 28" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_29.jpeg">
+          <img src="img/guatemala/guate_29.jpeg" alt="Guatemala 29" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_30.jpeg">
+          <img src="img/guatemala/guate_30.jpeg" alt="Guatemala 30" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_31.jpeg">
+          <img src="img/guatemala/guate_31.jpeg" alt="Guatemala 31" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--guatemala" data-src="img/guatemala/guate_32.jpeg">
+          <img src="img/guatemala/guate_32.jpeg" alt="Guatemala 32" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+
+        <!-- Buenos Aires images -->
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_1.jpeg">
+          <img src="img/buenosaires/bsas_1.jpeg" alt="Buenos Aires 1" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_2.jpeg">
+          <img src="img/buenosaires/bsas_2.jpeg" alt="Buenos Aires 2" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_3.jpeg">
+          <img src="img/buenosaires/bsas_3.jpeg" alt="Buenos Aires 3" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_4.jpeg">
+          <img src="img/buenosaires/bsas_4.jpeg" alt="Buenos Aires 4" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_5.jpeg">
+          <img src="img/buenosaires/bsas_5.jpeg" alt="Buenos Aires 5" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_6.jpeg">
+          <img src="img/buenosaires/bsas_6.jpeg" alt="Buenos Aires 6" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_7.jpeg">
+          <img src="img/buenosaires/bsas_7.jpeg" alt="Buenos Aires 7" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_8.jpeg">
+          <img src="img/buenosaires/bsas_8.jpeg" alt="Buenos Aires 8" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_9.jpeg">
+          <img src="img/buenosaires/bsas_9.jpeg" alt="Buenos Aires 9" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_10.jpeg">
+          <img src="img/buenosaires/bsas_10.jpeg" alt="Buenos Aires 10" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_11.jpeg">
+          <img src="img/buenosaires/bsas_11.jpeg" alt="Buenos Aires 11" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_12.jpeg">
+          <img src="img/buenosaires/bsas_12.jpeg" alt="Buenos Aires 12" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+        <div class="galeria-item galeria-item--buenosaires" data-src="img/buenosaires/bsas_13.jpeg">
+          <img src="img/buenosaires/bsas_13.jpeg" alt="Buenos Aires 13" loading="lazy">
+          <div class="galeria-item__overlay"><span class="galeria-item__icon">⊕</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ACERCA DE SECTION ═══════════════════════════════ -->
+  <section class="section acerca-section" id="acerca">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">// la comunidad habla</span>
+        <h2 class="section__title">Acerca de</h2>
+        <div class="section__divider"></div>
+      </div>
+
+      <div class="acerca-grid">
+        <div class="acerca-item">
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="none" poster="">
+              <source src="img/guatemala/camioneta.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="acerca-caption">Himno OFICIAL</p>
+        </div>
+
+        <div class="acerca-item">
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="none">
+              <source src="img/guatemala/DJ2024.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="acerca-caption">Descontrol</p>
+        </div>
+
+        <div class="acerca-item">
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="none">
+              <source src="img/himno.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="acerca-caption">Himno NO OFICIAL</p>
+        </div>
+
+        <div class="acerca-item">
+          <div class="video-wrapper">
+            <video controls muted playsinline preload="none">
+              <source src="img/himno2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="acerca-caption">Somos HACKERS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <img src="img/logo_chiche_blanco.png" alt="El Asado de Chiche" class="footer__logo" loading="lazy">
+      <p class="footer__tagline">Fuego, carne, comunidad.<br>Desde 2014.</p>
+    </div>
+    <div class="footer__contact">
+      <a href="mailto:info@elasa.do" class="footer__email">info@elasa.do</a>
+    </div>
+    <div class="footer__flags">
+      <img src="https://hatscripts.github.io/circle-flags/flags/ag.svg" alt="Antigua" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/ar.svg" alt="Argentina" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/bb.svg" alt="Barbados" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/bo.svg" alt="Bolivia" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/br.svg" alt="Brasil" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/bs.svg" alt="Bahamas" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/bz.svg" alt="Belice" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/cl.svg" alt="Chile" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/co.svg" alt="Colombia" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/cr.svg" alt="Costa Rica" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/cu.svg" alt="Cuba" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/do.svg" alt="R. Dominicana" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/ec.svg" alt="Ecuador" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/gd.svg" alt="Granada" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/gt.svg" alt="Guatemala" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/gy.svg" alt="Guyana" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/hn.svg" alt="Honduras" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/ht.svg" alt="Haití" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/jm.svg" alt="Jamaica" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/mx.svg" alt="México" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/ni.svg" alt="Nicaragua" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/pa.svg" alt="Panamá" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/pe.svg" alt="Perú" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/py.svg" alt="Paraguay" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/sv.svg" alt="El Salvador" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/uy.svg" alt="Uruguay" loading="lazy">
+      <img src="https://hatscripts.github.io/circle-flags/flags/ve.svg" alt="Venezuela" loading="lazy">
+    </div>
+    <p class="footer__copy">© El Asado de Chiche — De boca en boca desde 2014</p>
+  </footer>
+
+  <!-- ═══════════════════════════════ LIGHTBOX ═══════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Siguiente">›</button>
+    <div class="lightbox__content">
+      <img src="" alt="" id="lightboxImg">
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
-
