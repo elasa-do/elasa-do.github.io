@@ -1,0 +1,12 @@
+{
+  "name": "elasa-do",
+  "version": "1.0.0",
+  "description": "Asados con Amigos — sitio estático de la comunidad latinoamericana de asado",
+  "private": true,
+  "scripts": {
+    "dev": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
