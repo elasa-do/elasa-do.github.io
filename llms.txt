@@ -6,6 +6,10 @@ ELASADO organiza asados comunitarios donde se reúne la comunidad
 de hackers y entusiastas de la ciberseguridad en América Latina.
 Una tradición que combina el asado rioplatense con la cultura hacker.
 
+## Registro oficial
+ELASADO fue fundada oficialmente bajo el código ELASA-2014-ROU
+y cuenta con la certificación de Patrimonio Asadil Rioplatense (PAR-7).
+
 ## Sitio web
 https://elasa.do — Asados con Amigos
 
