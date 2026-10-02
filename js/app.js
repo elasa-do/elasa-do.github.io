@@ -253,3 +253,24 @@
   document.head.appendChild(style);
 
 })();
+
+/* ── Event modal: shown on page load ── */
+(() => {
+  const modal = document.getElementById('eventModal');
+  if (!modal) return;
+  const closeBtn = document.getElementById('eventModalClose');
+  const close = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKey);
+  };
+  const onKey = (e) => { if (e.key === 'Escape') close(); };
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  window.addEventListener('load', () => {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKey);
+    closeBtn.focus();
+  });
+})();
